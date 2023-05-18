@@ -84,3 +84,54 @@ print(f"El promedio del peso en niños es de: {pn}")
 print(f"El promedio del peso en jovenes es de: {pj}")
 print(f"El promedio del peso en adultos es de: {pa}")
 print(f"El promedio del peso en viejos es de: {pv}")
+
+"""En una empresa se requiere calcular el salario semanal de cada uno de los n obreros que
+laboran en ella. El salario se obtiene de la sig. forma: Si el obrero trabaja 40 horas o menos
+se le paga $20 por hora, Si trabaja más de 40 horas se le paga $20 por cada una de las
+primeras 40 horas y $25 por cada hora extra."""
+
+
+for n in range(3):
+    ht=int(input("Cuantas horas trabaja? "))
+    if ht<=40:
+        to=ht*20
+        print(f"Tu salario sera de {to}")
+    if ht>40:
+        to=int(40*20)
+        ma=int((ht-40)*25)
+        print(f"Tu salario dera de {to+ma}")
+        
+"""Un teatro otorga descuentos según la edad del cliente. Determinar la cantidad de dinero
+que el teatro deja de percibir por cada una de las categorías. Tomar en cuenta que los
+niños menores de 5 años no pueden entrar al teatro y que existe un precio único en los
+asientos. Los descuentos se hacen tomando en cuenta el siguiente cuadro:"""
+
+a=5000
+cd=0
+
+
+
+for n in range(5):
+    e=int(input("Cuantos años tiene"))
+    if e>=5 and e<=14:
+        des=a*0.35
+        print(f"El descuento para la categoria 1 es: {des}")
+        cd=cd+des
+    elif e>=15 and e<=19:
+        des=a*0.25
+        print(f"El descuento para la categoria 2 es: {des}")
+        cd=cd+des
+    elif e>=20 and  e<=45:
+        des=a*0.1
+        print(f"El descuento para la categoria 3 es: {des}")
+        cd=cd+des
+    elif e>=46 and e<=65:
+        des=a*0.25
+        print(f"El descuento para la categoria 4 es: {des}")
+        cd=cd+des
+    elif e>=66:
+        des=a*0.35
+        print(f"El descuento para la categoria 1 es: {des}")
+        cd=cd+des
+
+print(f"La cantidad de dinero que el teatro dejo percibir por los descuentos es de {cd}")
